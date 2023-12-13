@@ -135,7 +135,25 @@ Total signal transmission time 42.384us.
 Total signal transmission time 30.816us.
 <img src="./Image/W5500_sig_16bit_En_RSR.png" width="100%" height="50%" title="16bit_En_RSR Signal" alt="16bit_En_RSR signal"></img>
 
+## Iperf Test
 
-<pre><code>
-{code}
-</code></pre>
+### Testing Without Interrupt
+
+- Test without 16-bit function
+<img src="./Image/W5500_Iperf_16_Dn_INT_Dn.png" width="80%" height="50%" title="Iperf_16_Dn_Int_Dn Log" alt="Iperf_16_Dn_Int_Dn log"></img>
+
+- Test With 16-bit function
+<img src="./Image/W5500_Iperf_16_En_INT_Dn.png" width="80%" height="50%" title="Iperf_16_En_Int_Dn Log" alt="Iperf_16_En_Int_Dn log"></img>
+
+### Testing with Interrupt
+
+- Test without 16-bit function
+<img src="./Image/W5500_Iperf_16_Dn_INT_En.png" width="80%" height="50%" title="Iperf_16_Dn_Int_En Log" alt="Iperf_16_Dn_Int_En log"></img>
+
+- Test With 16-bit function
+<img src="./Image/W5500_Iperf_16_En_INT_En.png" width="80%" height="50%" title="Iperf_16_En_Int_En Log" alt="Iperf_16_En_Int_En log"></img>
+
+## Test Result
+
+
+In our tests, using the original function method without interrupts yielded a speed of 42.1 Mbits/s. When interrupts were enabled with the same method, the speed slightly increased to 42.4 Mbits/s. Interestingly, when we implemented the 16-bit register read function, the speed consistently measured at 43.1 Mbits/s, regardless of whether interrupts were used or not.
